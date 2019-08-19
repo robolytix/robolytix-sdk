@@ -31,7 +31,7 @@
     );
      
     // Submit the POST request
-    $result = curl_exec($ch);
+    $response = curl_exec($ch);
      
     // Close cURL session handle
     curl_close($ch);

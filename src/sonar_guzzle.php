@@ -1,7 +1,7 @@
 <?php 
 
     // Set API KEY generated in your Account settings 
-    $API_KEY = '';
+    $API_KEY = 'XXX';
     
     $client = new \GuzzleHttp\Client([
         'headers' => [ 
@@ -17,4 +17,6 @@
         ['body' => json_encode($body)]
     );
 
+    // Print response
+    var_dump($response);
 ?>
