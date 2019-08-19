@@ -16,11 +16,11 @@ https://api.robolytix.com/v1/listprocesses
 There are also two endpoint for testing and developing purposes:
 
 * **Ping**
-Testing of API communication.
+- testing of API communication.
 https://api.robolytix.com/v1/ping
 
 * **Account**
-Validating acount credentials (API key).
+- validating acount credentials (API key).
 https://api.robolytix.com/v1/account
 
 ## Languages
