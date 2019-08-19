@@ -8,18 +8,18 @@ Detailed description of Robolytix proncipes and API is in [documentation section
 
 There are two main endpoints for communication with Robolytix API:
 
-* Messages - for sending messages from Sonars.
+* **Messages** - for sending messages from Sonars.
 https://api.robolytix.com/v1/messages
-* List processes - for listing all processes associated with selected account.
+* **List processes** - for listing all processes associated with selected account.
 https://api.robolytix.com/v1/listprocesses
 
 There are also two endpoint for testing and developing purposes:
 
-* Ping
+* **Ping**
 Testing of API communication.
 https://api.robolytix.com/v1/ping
 
-* Account
+* **Account**
 Validating acount credentials (API key).
 https://api.robolytix.com/v1/account
 
