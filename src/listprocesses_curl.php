@@ -12,7 +12,6 @@
     // Set HTTP Header for POST request 
     curl_setopt($ch, CURLOPT_HTTPHEADER, array(
         'Content-Type: application/json',
-        'Content-Length: ' . strlen($payload),
         'Authorization: ' . $API_KEY)
     );
      
