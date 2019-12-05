@@ -17,7 +17,6 @@ There are also two endpoint for testing and developing purposes:
 
 * **Ping** - testing of API communication.
 https://api.robolytix.com/v1/ping
-
 * **Account** - validating account credentials (API key).
 https://api.robolytix.com/v1/account
 
