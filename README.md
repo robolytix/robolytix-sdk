@@ -2,7 +2,7 @@
 
 Examples in various languages how to call Robolytix API and send message. 
 
-Detailed description of Robolytix proncipes and API is in [documentation section](https://www.robolytix.com/documentation/overview/). Generate your API Key in [Robolytix Settings](https://app.robolytix.com/en/admin/). There is also OpenAPI specification of Robolytix API at https://api.robolytix.com/apidoc/.
+Detailed description of Robolytix principles and API is in [documentation section](https://www.robolytix.com/documentation/overview/). Generate your API Key in [Robolytix Settings](https://app.robolytix.com/en/admin/). There is also OpenAPI specification of Robolytix API at https://api.robolytix.com/apidoc/.
 
 ## Endpoints
 
@@ -18,7 +18,7 @@ There are also two endpoint for testing and developing purposes:
 * **Ping** - testing of API communication.
 https://api.robolytix.com/v1/ping
 
-* **Account** - validating acount credentials (API key).
+* **Account** - validating account credentials (API key).
 https://api.robolytix.com/v1/account
 
 ## Languages
