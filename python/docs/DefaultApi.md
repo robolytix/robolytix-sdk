@@ -1,4 +1,4 @@
-# swagger_client.DefaultApi
+# robolytix_client.DefaultApi
 
 All URIs are relative to *https://api.robolytix.com/v1*
 
@@ -19,18 +19,18 @@ Get list of processes associated with current account.
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import robolytix_client
+from robolytix_client.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: api_key
-configuration = swagger_client.Configuration()
+configuration = robolytix_client.Configuration()
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.DefaultApi(swagger_client.ApiClient(configuration))
+api_instance = robolytix_client.DefaultApi(robolytix_client.ApiClient(configuration))
 
 try:
     # List processes
@@ -69,18 +69,18 @@ Get list of Sonar types.
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import robolytix_client
+from robolytix_client.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: api_key
-configuration = swagger_client.Configuration()
+configuration = robolytix_client.Configuration()
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.DefaultApi(swagger_client.ApiClient(configuration))
+api_instance = robolytix_client.DefaultApi(robolytix_client.ApiClient(configuration))
 
 try:
     # List types
@@ -119,19 +119,19 @@ Monitors and views this process in Robolytix.
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import robolytix_client
+from robolytix_client.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: api_key
-configuration = swagger_client.Configuration()
+configuration = robolytix_client.Configuration()
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.DefaultApi(swagger_client.ApiClient(configuration))
-body = swagger_client.Message() # Message | 
+api_instance = robolytix_client.DefaultApi(robolytix_client.ApiClient(configuration))
+body = robolytix_client.Message() # Message | 
 content_type = 'content_type_example' # str | Content-Type
 
 try:

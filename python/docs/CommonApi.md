@@ -1,4 +1,4 @@
-# swagger_client.CommonApi
+# robolytix_client.CommonApi
 
 All URIs are relative to *https://api.robolytix.com/v1*
 
@@ -18,18 +18,18 @@ The Account resource is used for validating account credentials.
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import robolytix_client
+from robolytix_client.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: api_key
-configuration = swagger_client.Configuration()
+configuration = robolytix_client.Configuration()
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.CommonApi(swagger_client.ApiClient(configuration))
+api_instance = robolytix_client.CommonApi(robolytix_client.ApiClient(configuration))
 
 try:
     # Account details
@@ -68,18 +68,18 @@ The Ping resource is used to check the status of the Robolytix API. No credentia
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import robolytix_client
+from robolytix_client.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: api_key
-configuration = swagger_client.Configuration()
+configuration = robolytix_client.Configuration()
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.CommonApi(swagger_client.ApiClient(configuration))
+api_instance = robolytix_client.CommonApi(robolytix_client.ApiClient(configuration))
 
 try:
     # Ping

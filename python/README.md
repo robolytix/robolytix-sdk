@@ -1,4 +1,4 @@
-# swagger-client
+# robolytix-client
 Robolytix is the key online analytic and monitoring tool for Robotic Process Automation using Sonar technology to evaluate, audit, monitor and improve performance of robots operating in any application, RPA platform or custom solution. Manage your RPA projects effectively with exact KPIs. Visualise your whole process at one place.
 
 For more information, please visit [http://support.robolytix.com/](http://support.robolytix.com/)
@@ -13,9 +13,9 @@ Python 2.7 and 3.4+
 If the python package is hosted on Github, you can install directly from Github
 
 ```sh
-pip install git+https://github.com/GIT_USER_ID/GIT_REPO_ID.git
+pip install git+https://github.com/robolytix/robolytix-sdk.git
 ```
-(you may need to run `pip` with root permission: `sudo pip install git+https://github.com/GIT_USER_ID/GIT_REPO_ID.git`)
+(you may need to run `pip` with root permission: `sudo pip install git+https://github.com/robolytix/robolytix-sdk.git`)
 
 Then import the package:
 ```python
@@ -50,8 +50,6 @@ from pprint import pprint
 # Configure API key authorization: api_key
 configuration = robolytix_client.Configuration()
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = robolytix_client.CommonApi(robolytix_client.ApiClient(configuration))
@@ -66,8 +64,6 @@ except ApiException as e:
 # Configure API key authorization: api_key
 configuration = robolytix_client.Configuration()
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = robolytix_client.CommonApi(robolytix_client.ApiClient(configuration))
