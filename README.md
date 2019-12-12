@@ -4,14 +4,14 @@ Examples in various languages how to call Robolytix API and send message.
 
 Detailed description of Robolytix principles and API is in [technical documentation section](https://www.robolytix.com/docs/). Generate your API Key in [Robolytix Settings](https://app.robolytix.com/en/admin/). There is also OpenAPI specification of Robolytix API at https://api.robolytix.com/apidoc/.
 
-# Integration steps
+# How to integrate
 
 1. Test endpoint **/ping** from your environment
 2. Create Robolytix account and test Sonar
-  1. Create account at [Robolytix Signup](https://app.robolytix.com/en/Signup)
-  2. Create process and API key
-  3. Execute endpoint **/messages** with your testing message
-  4. See data in Robolytix - process message list
+   1. Create account at [Robolytix Signup](https://app.robolytix.com/en/Signup)
+   2. Create process and API key
+   3. Execute endpoint **/messages** with your testing message
+   4. See data in Robolytix - process message list
 3. Implement endpoints **/listprocesses** and **/listtypes** 
 
 ## Endpoints
