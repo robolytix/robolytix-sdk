@@ -43,12 +43,12 @@ Sonar action have a few properties visible to end users. Definition of all prope
   hint: *"Name of the current sonar should be unique in the whole process."*
   
   type: *string*
-* **processid**
+* **processid** - Process identification must contain one GUID from **/listprocesses** endpoint.
 
   hint: *"List of processes in the selected account. For creating a new process go to Robolytix Settings."* 
   
   type: *string*
-* **type**
+* **type** - Message type must contain one name from **/listtypes** endpoint.
 
   hint: *"Every process should start at sonars type Start and end at sonars type End. The number of Continuous sonars is unlimited. Use Error sonars for handling errors. Valid values are start, common, end and error."*
   
@@ -60,7 +60,7 @@ Sonar action have a few properties visible to end users. Definition of all prope
   type: *string*
 * *service*
 
-  *This property is hidden from endusers, but it is required. Identification of RPA tool. It should be its name, or specific identification string (e.g. "Integromat", "Zapier",...).*
+  *This property is hidden from endusers, but it is required. Identification of RPA tool. Its value should be tool name, or unique identification string (e.g. "Integromat", "Zapier",...).*
   
   type: *string*
 
