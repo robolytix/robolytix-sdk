@@ -39,23 +39,23 @@ The two endpoints **/listprocesses** and **/listtypes** are used for backend cal
 Sonar action have a few properties visible to end users. Definition of all properties is in OpenAPI definition at https://api.robolytix.com/apidoc/.
 
 * **name**\
-  hint: *"Name of the current sonar should be unique in the whole process."*\  
+  hint: *"Name of the current sonar should be unique in the whole process."*\
   type: *string*
   
 * **processid** - Process identification must contain one GUID from **/listprocesses** endpoint.\
-  hint: *"List of processes in the selected account. For creating a new process go to Robolytix Settings."*\  
+  hint: *"List of processes in the selected account. For creating a new process go to Robolytix Settings."*\
   type: *string*
   
 * **type** - Message type must contain one name from **/listtypes** endpoint.\
-  hint: *"Every process should start at sonars type Start and end at sonars type End. The number of Continuous sonars is unlimited. Use Error sonars for handling errors. Valid values are start, common, end and error."*\  
+  hint: *"Every process should start at sonars type Start and end at sonars type End. The number of Continuous sonars is unlimited. Use Error sonars for handling errors. Valid values are start, common, end and error."*\
   type: *string*
   
 * **runid**\
-  hint: *"Unique identification of one process run. Such as timestamp of first action or sonar."*\  
+  hint: *"Unique identification of one process run. Such as timestamp of first action or sonar."*\
   type: *string*
   
 * *service*\
-  *This property is hidden from endusers, but it is required. Identification of RPA tool. Its value should be tool name, or unique identification string (e.g. "Integromat", "Zapier",...).*\  
+  *This property is hidden from endusers, but it is required. Identification of RPA tool. Its value should be tool name, or unique identification string (e.g. "Integromat", "Zapier",...).*\
   type: *string*
 
 ## Endpoints
