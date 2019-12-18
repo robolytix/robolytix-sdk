@@ -22,9 +22,18 @@ Connector from external platform usually implements only one action called Sonar
 
 ## Connector
 
-Robolytix connector have currently only one public action. This action is called Sonar and inplements endpoint **/messages**. There is a wireframe for Sonar appearance in most of the RPA / BPA platforms.
+Robolytix connector currently have only one public action. This action is called Sonar and inplements endpoint **/messages**. There is a wireframe for Sonar appearance in most of the RPA / BPA platforms.
 
-![Robolytix Sonar action](https://www.robolytix.com/screens/Robolytix-Sonar-Wireframe.png)
+![Robolytix Sonar Action UI](https://www.robolytix.com/screens/robolytix-sonar-wireframe.png)
+
+### Workflows
+
+Connector implementations usually composes of three main parts.
+* **Connection** - Management and setting credentials to service.
+* **Settings** - Setting values for specific action, it is usually done by user form.
+* **Execution** - Essential execution of the underlying action.
+
+![Robolytix Sonar Workflows](https://www.robolytix.com/screens/robolytix-sonar-workflow.png)
 
 ### Connection
 
