@@ -28,7 +28,7 @@ Robolytix connector currently have only one public action. This action is called
 
 ### Workflows
 
-Connector implementations usually composes of three main parts.
+Connector implementation usually composes of three main parts.
 * **Connection** - Management and setting credentials to service.
 * **Settings** - Setting values for specific action, it is usually done by user form.
 * **Execution** - Essential execution of the underlying action.
