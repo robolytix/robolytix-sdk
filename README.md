@@ -4,7 +4,7 @@
   <img width="150px" src="https://www.robolytix.com/screens/robolytix-sonar-icon-512.png" alt="Send Sonar to Robolytix.com" title="Robolytix.com">
 </h1>
 
-Examples in different languages how to call Robolytix API and send message (integrate Sonar). 
+This repository contains examples in different languages how to call Robolytix API and send message data (integrate Sonar). 
 
 Detailed description of Robolytix principles and API is in [technical documentation section](https://www.robolytix.com/docs/). Generate your API Key in [Robolytix Settings](https://app.robolytix.com/en/admin/). There is also OpenAPI specification of Robolytix API at https://api.robolytix.com/apidoc/.
 
@@ -84,6 +84,14 @@ There are also two endpoints for testing and developing purposes:
 https://api.robolytix.com/v1/ping
 * **Account** - validating account credentials (API key).
 https://api.robolytix.com/v1/account
+
+### Sending message data
+
+Main endpoint for sending data from process to analysis is **/messages** endpoint. Detailed description is located in specification https://api.robolytix.com/apidoc/. Following example sends data with popular *cURL* utility.
+```bash
+# options -v and -i are for verbose mode and writing HTTP headers to output
+curl -X POST -H 'Authorization: Token 0cf4f956-1230-4e07-a746-94c09598a483' -H 'Content-Type: application/json' -d '{"name":"Start process","type":"start","processid":"55624b9f-63ca-4793-8412-082b43a4db39"}' -v -i 'https://api.robolytix.com/v1/messages'
+```
 
 ## Languages
 
