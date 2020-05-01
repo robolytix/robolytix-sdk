@@ -13,7 +13,7 @@ Detailed description of Robolytix principles and API is in [technical documentat
 There two ways of integration your application with Robolytix.
 
 1. Send message to Robolytix ([individual message](#send-message-data) or [in bulk](#send-bulk-message-data))
-2. Integrate full-featured connector (with other entities like process)
+2. [Integrate full-featured connector](#how-to-integrate-connector) (with other entities like process)
 
 Go to [list of endpoints](#endpoints) or [list of programming languages](#languages) in this repository.
 
@@ -116,7 +116,6 @@ There are two main endpoints for communication with Robolytix API:
 
 * **Messages** - for sending messages from Sonars.
 https://api.robolytix.com/v1/messages
-
 * **Bulk messages** - for sending array of messages from Sonars.
 https://api.robolytix.com/v1/messages/bulk
 
