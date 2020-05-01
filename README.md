@@ -1,8 +1,8 @@
 # Robolytix
 
-<h1 align="center">
+<p align="center">
   <img width="150px" src="https://www.robolytix.com/screens/robolytix-sonar-icon-512.png" alt="Send Sonar to Robolytix.com" title="Robolytix.com">
-</h1>
+</p>
 
 This repository contains examples in different languages how to call Robolytix API and send message data (integrate Sonar). 
 
