@@ -87,7 +87,7 @@ Sonar action have a few properties visible to end users. Definition of all prope
   type: *string*
   
 * *service*\
-  *This property is hidden from endusers, but it is required. Identification of RPA tool. Its value should be tool name, or unique identification string (e.g. "Integromat", "Zapier",...).*\
+  hint: *This property is hidden from endusers, but it is required. Identification of RPA tool. Its value should be tool name, or unique identification string (e.g. "Integromat", "Zapier",...).*\
   type: *string*
   
 * *createdon*\
