@@ -15,6 +15,8 @@ There two ways of integration your application with Robolytix.
 1. Send message to Robolytix ([individual message](#send-message-data) or [in bulk](#send-bulk-message-data))
 2. Integrate full-featured connector (with other entities like process)
 
+Go to [list of endpoints](#endpoints) or [list of programming languages](#languages) in this repository.
+
 ## Send message data
 
 Main endpoint for sending data from process to Robolytix for analysis is **/messages** endpoint. Detailed description is located in specification https://api.robolytix.com/apidoc/. Following example sends data with popular *cURL* utility.
@@ -25,9 +27,9 @@ curl -X POST -H 'Authorization: Token 0cf4f956-1230-4e07-a746-94c09598a483' -H '
 
 ### Send bulk message data
 
-There is also endpoint **/messages/bulk** for sending multiple messages at once. It process the same message structure as previous endpoint, but accepts array of these records.
+There is also endpoint **/messages/bulk** for sending multiple messages at once. It utilizes the same message structure as previous endpoint but accepts array of these records.
 
-It is highly suggested to use property *createdon*. This property represents the time, when reported event occurs in your system. If the value is empty, the message received time will be used.
+It is highly suggested to use property *createdon*. This property represents the time, when reported event occurs in your system. If the value is empty, the message received time will be used. Consult valid [date time formats](#date-time-formats). 
 
 ## How to integrate connector
 
@@ -89,15 +91,34 @@ Sonar action have a few properties visible to end users. Definition of all prope
   type: *string*
   
 * *createdon*\
-  hint: *"Message created datetime. Valid values are in "2006-01-13T15:04", "2006-01-13" or full ISO-8601 (yyyy-MM-dd'T'HH:mm:ssZ) formats. If the value is empty, the message received time will be used."*\
+  hint: *"Message created datetime. Valid values are in "2006-02-14T15:04", "2006-02-14" or full RFC3339 (yyyy-MM-dd'T'HH:mm:ssZ) formats. If the value is empty, the message received time will be used."*\
   type: *string*
+  
+### Date time formats
 
+It is possible to override created date of message with property *createdon*. This property represents time, when event occur in the system. It is usually exchanged for time, when message is received by the API (this is also the default value, when property is not used). The are several formats, that are valid for datetime values. This list contains examples for representation of **14th of February 2020 15:04:35.078 BST / London**. 
+
+* Date format "yyyy-MM-dd"  
+  Example value is *"2020-02-14"*.
+  
+* Date with time format "yyyy-MM-dd'T'HH:mm"  
+  Example value is *"2020-02-14T15:04"*. 
+  
+* RFC3339 "yyyy-MM-dd'T'HH:mm:ssZ" format  
+  Example value is *"2020-02-14T15:04:35+01:00"*. 
+
+* RFC3339 "yyyy-MM-dd'T'HH:mm:ss.iZ" format with effective precision up to 3 decimal places (milliseconds)  
+  Example value is *"2020-02-14T15:04:35.078+01:00"*.  
+  
 ## Endpoints
 
 There are two main endpoints for communication with Robolytix API:
 
 * **Messages** - for sending messages from Sonars.
 https://api.robolytix.com/v1/messages
+
+* **Bulk messages** - for sending array of messages from Sonars.
+https://api.robolytix.com/v1/messages/bulk
 
 There are also two endpoints for for other entities (*process* and *type of sonar*):
 
