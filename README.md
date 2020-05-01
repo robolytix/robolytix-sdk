@@ -12,16 +12,22 @@ Detailed description of Robolytix principles and API is in [technical documentat
 
 There two ways of integration your application with Robolytix.
 
-1. Send message to Robolytix (individual message or in bulk)
-2. Integrate full-featured connector (with getting other entities like process)
+1. Send message to Robolytix ([individual message](#send-message-data) or [in bulk](#send-bulk-message-data))
+2. Integrate full-featured connector (with other entities like process)
 
-## Sending message data
+## Send message data
 
 Main endpoint for sending data from process to Robolytix for analysis is **/messages** endpoint. Detailed description is located in specification https://api.robolytix.com/apidoc/. Following example sends data with popular *cURL* utility.
 ```bash
 # options -v and -i are for verbose mode and writing HTTP headers to output
 curl -X POST -H 'Authorization: Token 0cf4f956-1230-4e07-a746-94c09598a483' -H 'Content-Type: application/json' -d '{"name":"Start process","type":"start","processid":"55624b9f-63ca-4793-8412-082b43a4db39"}' -v -i 'https://api.robolytix.com/v1/messages'
 ```
+
+### Send bulk message data
+
+There is also endpoint **/messages/bulk** for sending multiple messages at once. It process the same message structure as previous endpoint, but accepts array of these records.
+
+It is highly suggested to use property *createdon*. This property represents the time, when reported event occurs in your system. If the value is empty, the message received time will be used.
 
 ## How to integrate connector
 
@@ -80,6 +86,10 @@ Sonar action have a few properties visible to end users. Definition of all prope
   
 * *service*\
   *This property is hidden from endusers, but it is required. Identification of RPA tool. Its value should be tool name, or unique identification string (e.g. "Integromat", "Zapier",...).*\
+  type: *string*
+  
+* *createdon*\
+  hint: *"Message created datetime. Valid values are in "2006-01-13T15:04", "2006-01-13" or full ISO-8601 (yyyy-MM-dd'T'HH:mm:ssZ) formats. If the value is empty, the message received time will be used."*\
   type: *string*
 
 ## Endpoints
