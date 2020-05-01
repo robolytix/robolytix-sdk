@@ -6,9 +6,24 @@
 
 This repository contains examples in different languages how to call Robolytix API and send message data (integrate Sonar). 
 
-Detailed description of Robolytix principles and API is in [technical documentation section](https://www.robolytix.com/docs/). Generate your API Key in [Robolytix Settings](https://app.robolytix.com/en/admin/). There is also OpenAPI specification of Robolytix API at https://api.robolytix.com/apidoc/.
+Detailed description of Robolytix principles and API is in [technical documentation section](https://www.robolytix.com/docs/). Generate your API Key in [Robolytix Settings](https://app.robolytix.com/en/admin/). There is also OpenAPI / Swagger specification of Robolytix API at https://api.robolytix.com/apidoc/.
 
-## How to integrate
+## Overview
+
+There two ways of integration your application with Robolytix.
+
+1. Send message to Robolytix (individual message or in bulk)
+2. Integrate full-featured connector (with getting other entities like process)
+
+## Sending message data
+
+Main endpoint for sending data from process to Robolytix for analysis is **/messages** endpoint. Detailed description is located in specification https://api.robolytix.com/apidoc/. Following example sends data with popular *cURL* utility.
+```bash
+# options -v and -i are for verbose mode and writing HTTP headers to output
+curl -X POST -H 'Authorization: Token 0cf4f956-1230-4e07-a746-94c09598a483' -H 'Content-Type: application/json' -d '{"name":"Start process","type":"start","processid":"55624b9f-63ca-4793-8412-082b43a4db39"}' -v -i 'https://api.robolytix.com/v1/messages'
+```
+
+## How to integrate connector
 
 Connector from external platform usually implements only one action called Sonar. This action calls **/messages** endpoint. There are two endpoints **/listprocesses** and **/listtypes** that serve enumerations for main call. The rest of the endpoints are just for validation connection and authorization.
 
@@ -20,7 +35,7 @@ Connector from external platform usually implements only one action called Sonar
    4. See data in Robolytix - process message list
 3. Implement endpoints **/listprocesses** and **/listtypes** 
 
-## Connector
+### Connector design
 
 Robolytix connector currently have only one public action. This action is called Sonar and inplements endpoint **/messages**. There is a wireframe for Sonar appearance in most of the RPA / BPA platforms.
 
@@ -43,7 +58,7 @@ Most of the platforms have connection manager. This is the place, where users ca
 
 The two endpoints **/listprocesses** and **/listtypes** are used for backend calls (also named Remote Procedures) for filing values to Sonar properties. They server as enumerations for dropdown inputs. Endpoint **/listprocesses** returns list of values for **processid** property and **/listtypes** returns list of values for **type** property. Endpoint **type** can be cached and implemented in connector as constant enumeration.
 
-### Properties
+### Message properties
 
 Sonar action have a few properties visible to end users. Definition of all properties is in OpenAPI definition at https://api.robolytix.com/apidoc/.
 
@@ -73,25 +88,20 @@ There are two main endpoints for communication with Robolytix API:
 
 * **Messages** - for sending messages from Sonars.
 https://api.robolytix.com/v1/messages
+
+There are also two endpoints for for other entities (*process* and *type of sonar*):
+
 * **List processes** - for listing all processes associated with selected account.
 https://api.robolytix.com/v1/listprocesses
 * **List types** - for listing all message types.
 https://api.robolytix.com/v1/listtypes
 
-There are also two endpoints for testing and developing purposes:
+And two endpoints for testing and developing purposes:
 
 * **Ping** - testing of API communication.
 https://api.robolytix.com/v1/ping
 * **Account** - validating account credentials (API key).
 https://api.robolytix.com/v1/account
-
-### Sending message data
-
-Main endpoint for sending data from process to analysis is **/messages** endpoint. Detailed description is located in specification https://api.robolytix.com/apidoc/. Following example sends data with popular *cURL* utility.
-```bash
-# options -v and -i are for verbose mode and writing HTTP headers to output
-curl -X POST -H 'Authorization: Token 0cf4f956-1230-4e07-a746-94c09598a483' -H 'Content-Type: application/json' -d '{"name":"Start process","type":"start","processid":"55624b9f-63ca-4793-8412-082b43a4db39"}' -v -i 'https://api.robolytix.com/v1/messages'
-```
 
 ## Languages
 
