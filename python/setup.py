@@ -1,36 +1,37 @@
 # coding: utf-8
 
 """
-    Robolytix
+    Setup script for robolytix
 
-    Robolytix is the key online analytic and monitoring tool for Robotic Process Automation using Sonar technology to evaluate, audit, monitor and improve performance of robots operating in any application, RPA platform or custom solution. Manage your RPA projects effectively with exact KPIs. Visualise your whole process at one place.  # noqa: E501
+    Robolytix is the key online analytic and monitoring tool for Robotic Process Automation using Sonar technology to evaluate, audit, monitor and improve performance of robots operating in any application, RPA platform or custom solution. Manage your RPA projects effectively with exact KPIs. Visualise your whole process at one place.
 
 """
 
-from setuptools import setup, find_packages  # noqa: H301
+import setuptools
 
-NAME = "robolytix_client"
-VERSION = "1.0.1"
-# To install the library, run the following
-#
-# python setup.py install
-#
-# prerequisite: setuptools
-# http://pypi.python.org/pypi/setuptools
+with open("README.md", "r") as fh:
+    long_description = fh.read()
 
-REQUIRES = ["urllib3 >= 1.15", "six >= 1.10", "certifi", "python-dateutil"]
-
-setup(
-    name=NAME,
-    version=VERSION,
-    description="Robolytix",
-    author_email="",
-    url="",
+setuptools.setup(
+    name="robolytix",
+    version="0.1.1",
+    author="Robolytix.com",
+    author_email="info@robolytix.com",
+    description="Robolytix is the key online analytic and monitoring tool for Business / Robotic Process Automation.",
+    long_description=long_description,
+    long_description_content_type="text/markdown",
+    url="https://github.com/robolytix/robolytix-sdk/",
     keywords=["Client", "Robolytix"],
-    install_requires=REQUIRES,
-    packages=find_packages(),
-    include_package_data=True,
-    long_description="""\
-    Robolytix is the key online analytic and monitoring tool for Robotic Process Automation using Sonar technology to evaluate, audit, monitor and improve performance of robots operating in any application, RPA platform or custom solution. Manage your RPA projects effectively with exact KPIs. Visualise your whole process at one place.  # noqa: E501
-    """
+    packages=setuptools.find_packages(),
+    classifiers=[
+        "Programming Language :: Python :: 3",
+        "License :: OSI Approved :: MIT License",
+        "Operating System :: OS Independent",
+        "Topic :: Home Automation",
+        "Topic :: System :: Monitoring",
+        "Topic :: Software Development :: Libraries :: Python Modules",
+        "Intended Audience :: Developers",
+        "Intended Audience :: Information Technology",
+    ],
+    python_requires='>=3.4',
 )
