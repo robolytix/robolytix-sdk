@@ -1,30 +1,31 @@
-# robolytix-client
+# Robolytix Package
+
 Robolytix is the key online analytic and monitoring tool for Robotic Process Automation using Sonar technology to evaluate, audit, monitor and improve performance of robots operating in any application, RPA platform or custom solution. Manage your RPA projects effectively with exact KPIs. Visualise your whole process at one place.
 
-For more information, please visit [http://support.robolytix.com/](http://support.robolytix.com/)
+For more information, please visit https://www.robolytix.com/
 
-## Requirements.
+## Requirements
 
-Python 2.7 and 3.4+
+Python 3.4+
 
 ## Installation & Usage
 ### pip install
 
-If the python package is hosted on Github, you can install directly from Github
+You can install the Robolytix client package from PyPI
 
 ```sh
-pip install git+https://github.com/robolytix/robolytix-sdk.git
+pip install robolytix
 ```
-(you may need to run `pip` with root permission: `sudo pip install git+https://github.com/robolytix/robolytix-sdk.git`)
+(you may need to run `pip` with root permission: `sudo pip install robolytix`)
 
 Then import the package:
 ```python
-import robolytix_client 
+import robolytix 
 ```
 
 ### Setuptools
 
-Install via [Setuptools](http://pypi.python.org/pypi/setuptools).
+Install via [Setuptools](http://pypi.python.org/pypi/setuptools). You need to checkout package from Github `https://github.com/robolytix/robolytix-sdk.git` and step into Python directory.
 
 ```sh
 python setup.py install --user
@@ -33,7 +34,7 @@ python setup.py install --user
 
 Then import the package:
 ```python
-import robolytix_client
+import robolytix
 ```
 
 ## Getting Started
@@ -43,16 +44,16 @@ Please follow the [installation procedure](#installation--usage) and then run th
 ```python
 from __future__ import print_function
 import time
-import robolytix_client
-from robolytix_client.rest import ApiException
+import robolytix
+from robolytix.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: api_key
-configuration = robolytix_client.Configuration()
+configuration = robolytix.Configuration()
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
-api_instance = robolytix_client.CommonApi(robolytix_client.ApiClient(configuration))
+api_instance = robolytix.CommonApi(robolytix.ApiClient(configuration))
 
 try:
     # Account details
@@ -62,11 +63,11 @@ except ApiException as e:
     print("Exception when calling CommonApi->account: %s\n" % e)
 
 # Configure API key authorization: api_key
-configuration = robolytix_client.Configuration()
+configuration = robolytix.Configuration()
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
-api_instance = robolytix_client.CommonApi(robolytix_client.ApiClient(configuration))
+api_instance = robolytix.CommonApi(robolytix.ApiClient(configuration))
 
 try:
     # Ping
@@ -109,5 +110,3 @@ Class | Method | HTTP request | Description
 
 
 ## Author
-
-

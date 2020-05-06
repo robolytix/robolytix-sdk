@@ -25,3 +25,6 @@ from robolytix_client.models.inline_response_default2_data import InlineResponse
 from robolytix_client.models.message import Message
 from robolytix_client.models.process import Process
 from robolytix_client.models.type import Type
+
+ # Version of robolytix package
+__version__ = "0.2.0"

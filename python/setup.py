@@ -14,7 +14,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="robolytix",
-    version="0.1.1",
+    version="0.2.1",
     author="Robolytix.com",
     author_email="info@robolytix.com",
     description="Robolytix is the key online analytic and monitoring tool for Business / Robotic Process Automation.",
