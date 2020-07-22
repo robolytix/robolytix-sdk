@@ -68,29 +68,29 @@ The two endpoints **/listprocesses** and **/listtypes** are used for backend cal
 
 ### Message properties
 
-Sonar action have a few properties visible to end users. Definition of all properties is in OpenAPI definition at https://api.robolytix.com/apidoc/.
+Sonar action have a few properties visible to end users. Definition of all properties is in OpenAPI definition at https://api.robolytix.com/apidoc/. Hint is suggested text for tooltip in connector UI.
 
-* **name**\
+* **name** - Name of the sonar identifies specific sonar. It should be unique in the whole process.\
   hint: *"Name of the current sonar should be unique in the whole process."*\
   type: *string*
   
-* **processid** - Process identification must contain one GUID from **/listprocesses** endpoint.\
+* **processid** - Process identification must contain process GUID from related account (one value from **/listprocesses** endpoint).\
   hint: *"List of processes in the selected account. For creating a new process go to Robolytix Settings."*\
   type: *string*
   
-* **type** - Message type must contain one name from **/listtypes** endpoint.\
+* **type** - Message type must contain value representing its position in process (value from **/listtypes** endpoint).\
   hint: *"Every process should start at sonars type Start and end at sonars type End. The number of Continuous sonars is unlimited. Use Error sonars for handling errors. Valid values are start, common, end and error."*\
   type: *string*
   
-* **runid**\
+* **runid** - Unique identification of one process run. Such as timestamp of first action or return value 'Run identification' from start Sonar.\
   hint: *"Unique identification of one process run. Such as timestamp of first action or sonar."*\
   type: *string*
   
-* *service*\
-  hint: *This property is hidden from endusers, but it is required. Identification of RPA tool. Its value should be tool name, or unique identification string (e.g. "Integromat", "Zapier",...).*\
+* *service* - Identification of application or RPA tool. It should be name, or specific identification string (e.g. "Microsoft Dynamics", "Integromat", "Zapier",...).\
+  hint: *This property is hidden from endusers, but it is required. Identification of application or RPA tool. Its value should be tool name, or unique identification string (e.g. "Microsoft Dynamics", "Integromat", "Zapier",...).*\
   type: *string*
   
-* *createdon*\
+* *createdon* - Message created datetime.\
   hint: *"Message created datetime. Valid values are in "2006-02-14T15:04", "2006-02-14" or full RFC3339 (yyyy-MM-dd'T'HH:mm:ssZ) formats. If the value is empty, the message received time will be used."*\
   type: *string*
   
