@@ -6,6 +6,7 @@
 
 ![](https://img.shields.io/github/repo-size/robolytix/robolytix-sdk)
 [![PyPI version](https://badge.fury.io/py/robolytix.svg)](https://pypi.org/project/robolytix/)
+[![PyPI pyversions](https://img.shields.io/pypi/pyversions/robolytix.svg)](https://pypi.python.org/pypi/robolytix/)
 
 This repository contains examples in different languages how to call Robolytix API and send message data (integrate Sonar). 
 
