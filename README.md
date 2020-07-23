@@ -4,6 +4,9 @@
   <img width="150px" src="https://www.robolytix.com/screens/robolytix-sonar-icon-512.png" alt="Send Sonar to Robolytix.com" title="Robolytix.com">
 </p>
 
+![](https://img.shields.io/github/repo-size/robolytix/robolytix-sdk)
+[![PyPI version](https://badge.fury.io/py/robolytix.svg)](https://pypi.org/project/robolytix/)
+
 This repository contains examples in different languages how to call Robolytix API and send message data (integrate Sonar). 
 
 Detailed description of Robolytix principles and API is in [technical documentation section](https://www.robolytix.com/docs/). Generate your API Key in [Robolytix Settings](https://app.robolytix.com/en/admin/). There is also OpenAPI / Swagger specification of Robolytix API at https://api.robolytix.com/apidoc/.
