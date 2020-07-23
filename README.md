@@ -109,7 +109,13 @@ It is possible to override created date of message with property *createdon*. Th
 
 * RFC3339 "yyyy-MM-dd'T'HH:mm:ss.iZ" format with effective precision up to 3 decimal places (milliseconds)  
   Example value is *"2020-02-14T15:04:35.078+01:00"*.  
-  
+
+### Generating Run identification with API
+
+Property called **Run identification** is very useful for identifying individual process executions/runs. Robolytix incorporates algorithms for distinguishing separated process runs, but identification of overlapping process runs for processes with short history is less accurate. It is highly suggested to fill this optional field. Good identification strings are internal IDs of processes entities (like *order ID* in eshop, or *potential ID* in CRM).
+
+Field **Run identification** has no restrictions for shape of format. **For all messages with type *start* and empty value in this field API generates new GUID value.** This value is returned in [response object](https://api.robolytix.com/apidoc/) for **/messages** and **/messages/bulk** endpoints.
+
 ## Endpoints
 
 There are two main endpoints for communication with Robolytix API:
