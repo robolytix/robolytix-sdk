@@ -114,7 +114,7 @@ It is possible to override created date of message with property *createdon*. Th
 
 Property called **Run identification** is very useful for identifying individual process executions/runs. Robolytix incorporates algorithms for distinguishing separated process runs, but identification of overlapping process runs for processes with short history is less accurate. It is highly suggested to fill this optional field. Good identification strings are internal IDs of processes entities (like *order ID* in eshop, or *potential ID* in CRM).
 
-Field **Run identification** has no restrictions for shape of format. **For all messages with type *start* and empty value in this field API generates new GUID value.** This value is returned in [response object](https://api.robolytix.com/apidoc/) for **/messages** and **/messages/bulk** endpoints.
+Field **Run identification** has no restrictions for shape of format. **For all messages with type *start* and empty value in this field API endpoint **/messages** generates new GUID value.** In bulk API only input run identification values are used. This value is returned in [response object](https://api.robolytix.com/apidoc/) for **/messages** and **/messages/bulk** endpoints.
 
 ## Endpoints
 
